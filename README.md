@@ -54,3 +54,11 @@ pip install -r requirements.txt
 
 
 3. Follow the prompts to enter title and description metadata for the images in the directory.
+
+## Deactive
+
+Once you are done and want to close your virtual environment type into your terminal
+
+```
+deactivate
+```
