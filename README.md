@@ -29,13 +29,13 @@ python3 -m venv imgmeta
 - On macOS and Linux:
 
   ```
-  source venv/bin/activate
+  source imgmeta/bin/activate
   ```
 
 - On Windows:
 
   ```
-  venv\Scripts\activate
+  imgmeta\Scripts\activate
   ```
 
 4. Install the required packages:

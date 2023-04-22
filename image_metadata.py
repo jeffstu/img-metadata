@@ -25,6 +25,17 @@ def main():
     existing_filenames = {entry["filename"] for entry in existing_metadata}
     image_metadata = existing_metadata.copy()
 
+    image_files = [
+        img
+        for ext in image_extensions
+        for img in glob.glob(os.path.join(directory, ext))
+        if not "_thumb" in img and os.path.basename(img) not in existing_filenames
+    ]
+
+    if not image_files:
+        print("No images to process")
+        return
+
     root = tk.Tk()
     root.title("Image Metadata Entry")
 
@@ -71,15 +82,7 @@ def main():
         img_label.config(image=imgtk)
         img_label.image = imgtk
 
-    image_files = [
-        img
-        for ext in image_extensions
-        for img in glob.glob(os.path.join(directory, ext))
-        if not "_thumb" in img and os.path.basename(img) not in existing_filenames
-    ]
-
-    if image_files:
-        show_image(image_files[0])
+    show_image(image_files[0])
 
     save_button = tk.Button(root, text="Save and Next", command=save_and_next)
     save_button.grid(row=3, column=0, columnspan=2)
