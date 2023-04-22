@@ -9,6 +9,10 @@ This Python script is designed to help you add title and description metadata fo
 - PyYAML
 - Tkinter (included in Python's standard library)
 
+if you use the alt script you will also need
+
+- opencv-python
+
 ## Setting Up a Python Virtual Environment
 
 It's a good practice to use a virtual environment when working with Python projects. This helps keep dependencies required by different projects separate and ensures a clean working environment. Follow the steps below to set up a virtual environment for this script:
